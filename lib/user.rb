@@ -1,3 +1,5 @@
+require "./lib/joke"
+
 class User
 
   attr_reader :name, :jokes
@@ -9,6 +11,10 @@ class User
 
   def learn(joke)
     @jokes << joke
-  end 
+  end
+
+  def tell(user, joke)
+    user.learn(joke)
+  end
 
 end
